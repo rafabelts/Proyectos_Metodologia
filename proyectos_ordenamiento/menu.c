@@ -9,16 +9,16 @@ void seleccion_de_metodo(char metodo[], void metodo_ascendente(int arr[], int ta
 
 void menu(int* tamaño, int* opcion, int* opcion_metodo){
 	do{
-		printf("\nBienvenido al menú de ordenamientos\nIniciemos llenando el arreglo\n1. Continuar\n2. Salir\n");
+		printf("\nBienvenido al menú de métodos de ordenamiento\n1. Continuar\n2. Salir\n");
 		scanf("%d", opcion_metodo);
 
 		if(*opcion_metodo == 1){
-			printf("\n¿Cuántos valores tiene el arreglo?: ");
+			printf("\n¿Cuántos valores tiene tu arreglo?: ");
 			scanf("%d", tamaño);
 			
 			int arr[*tamaño];
 			llenado_de_array(arr, *tamaño);
-			printf("¿Con cual metodo quieres ordenar tu arreglo?\n1. Burbuja\n2. Inserción\n3. Selección\n");
+			printf("\n¿Con cuál metodo quieres ordenar tu arreglo?\n1. Burbuja\n2. Inserción\n3. Selección\n");
 			
 			scanf("%d", opcion);
 			switch(*opcion){
@@ -35,8 +35,7 @@ void menu(int* tamaño, int* opcion, int* opcion_metodo){
 					printf("\nOpción no disponible\n");
 					break;
 			}
-		} else if(*opcion_metodo == 2) continue; else{ printf("\nOpción no disponible\n"); continue;}
-		
+		} else if(*opcion_metodo == 2){ printf("\n¡Hasta luego!\n"); continue; } else{ printf("\nOpción no disponible\n"); continue;}	
 	} while(*opcion_metodo != 2);
 }
 
